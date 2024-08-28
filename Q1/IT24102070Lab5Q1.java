@@ -1,33 +1,48 @@
 import java.util.Scanner;
-
 public class IT24102070Lab5Q1 {
-    public static void main(String args[]) {
-        int num1, num2, num3;
+
+    public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter First integer: ");
-        num1 = input.nextInt();
-        System.out.println("Enter Second integer: ");
-        num2 = input.nextInt();
-        System.out.println("Enter Third integer: ");
-        num3 = input.nextInt();
-        int min = num1;
-        int max = num1;
+        int number1;
+        int number2;
+        int number3;
 
-        if (num2 < min) {
-            min = num2;
-        }
-        if (num2 > max) {
-            max = num2;
-        }
-        if (num3 < min) {
-            min = num3;
-        }
-        if (num3 > max) {
-            max = num3;
-        }
+         System.out.println("Enter the first integer : ");
+         number1 = input.nextInt();
 
-        System.out.println("The smallest number is: " + min);
-        System.out.println("The largest number is: " + max);
+         System.out.println("Enter the second integer : ");
+         number2 = input.nextInt();
+
+         System.out.println("Enter the third integer : ");
+         number3 = input.nextInt();
+
+         System.out.println("User entered numbers are :"+number1+" "+number2+" "+number3 );
+
+          if(number1<number2 && number1<number3) {
+              System.out.println("The Smallest number is " + number1);
+          }
+
+          else if (number2 < number1 && number2 < number3) {
+                  System.out.println("The Smallest number is " + number2);
+          }
+          else {
+                  System.out.println("The Smallest number is " + number3);
+          }
+          if(number1>number2 && number1>number3) {
+            System.out.println("The Largest number is " + number1);
+          }
+          else if(number2>number1 && number2>number3) {
+            System.out.println("The Largest number is " + number2);
+          }
+          else {
+            System.out.println("The Largest number is " + number3);
+          }
+
+
+
+
     }
+
 }
